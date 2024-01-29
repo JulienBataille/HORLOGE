@@ -1,6 +1,5 @@
 let alarmAudio = new Audio("/sounds/alarm.wav");
-let settingsHour = document.getElementById("settingsHour").value;
-let settingsMinute = document.getElementById("settingsMinute").value;
+
 
 
 

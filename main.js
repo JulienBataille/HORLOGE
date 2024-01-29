@@ -5,7 +5,8 @@ let settingsMinute = document.getElementById("settingsMinute").value;
 
 
 function updateClock(){
-
+    let settingsHour = document.getElementById("settingsHour").value;
+    let settingsMinute = document.getElementById("settingsMinute").value;
     let now = new Date();
     let milli = now.getMilliseconds(),
         sec = now.getSeconds(),
@@ -23,7 +24,7 @@ function updateClock(){
         document.getElementById(tags[i]).firstChild.nodeValue = corr[i] ;
     }
 
-    if (hou == settingsHour && min == settingsMinute && sec < 5){
+    if (hou == settingsHour && min == settingsMinute && sec<5){
         playSound(alarmAudio);
      }
 

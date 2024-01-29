@@ -2,6 +2,8 @@ let alarmAudio = new Audio("/sounds/alarm.wav");
 let settingsHour = parseInt(document.getElementById("settingsHour").textContent);
 let settingsMinute = parseInt(document.getElementById("settingsMinute").textContent);
 
+updateClock()
+
 function updateClock(){
 
     let now = new Date();
@@ -21,7 +23,7 @@ function updateClock(){
         document.getElementById(tags[i]).firstChild.nodeValue = corr[i] ;
     }
 
-    if (hou == settingsHour && min == settingsMinute && sec < 10){
+    if (hou == settingsHour && min == settingsMinute && sec < 5){
         playSound(alarmAudio);
      }
 
@@ -36,4 +38,3 @@ function playSound(sound) {
     sound.play();
 }
 
-setInterval(updateClock, 500);

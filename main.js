@@ -21,8 +21,8 @@ function updateClock(){
         document.getElementById(tags[i]).firstChild.nodeValue = corr[i] ;
     }
 
-    if (hou == settingsHour && min == settingsMinute){
-        playSound(alarmAudio)
+    if (hou == settingsHour && min == settingsMinute && sec < 10){
+        playSound(alarmAudio);
      }
 
 }; 
@@ -36,3 +36,4 @@ function playSound(sound) {
     sound.play();
 }
 
+setInterval(updateClock, 500);
